@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function jumpPage(url){
+            document.getElementById("page").src = url;
+        }
+    </script>
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top" style="position: static;">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--
+            <a href="../" class="navbar-brand">Bootstrap</a>
+            -->
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">财政管理 <b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="filter: alpha(opacity=90); opacity:0.9">
+                        <li><a href="javascript:void(0)" onclick="jumpPage('filcal')">消费管理</a></li>
+                        <li><a href="javascript:void(0)">收入管理</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">收支统计</a></li>
+                    </ul>
+                </li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">聊天室<b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="filter: alpha(opacity=90); opacity:0.9">
+                        <li><a href="javascript:void(0)" onclick="jumpPage('chatRoom')">谈天说地</a></li>
+                        <li><a href="javascript:void(0)">复杂心情</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)">娱乐八卦</a></li>
+                    </ul>
+                </li>
+                <li class="divider-vertical"></li>
+                <li><a href="#">我的微博</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">游戏<b class="caret"></b></a>
+                    <ul class="dropdown-menu" style="filter: alpha(opacity=90); opacity:0.9">
+                        <li><a href="javascript:void(0)" onclick="jumpPage('wuziqi')">五子棋</a></li>
+                        <li><a href="javascript:void(0)">推箱子</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">朋友圈</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">设置 <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">基本信息</a></li>
+                        <li><a href="#">特别信息</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">申请VIP</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

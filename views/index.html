@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css">
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+    <script src="/scripts/echarts-plain.js"></script>
+    -->
+    <script src="/scripts/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-theme.min.css">
+    <script src="/scripts/bootstrap.min.js"></script>
+    <title></title>
+</head>
+<body>
+<% include header.html %>
+<div class="container" style="margin-top: -20px;">
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero">
+        <div class="container">
+            <div class="row">
+                <div id="test" class="col-md-3" style="background-color: #EBEBEB;padding:10px 4px 0px 10px;">
+                    <% include left.html %>
+                </div>
+                <div class="col-md-9">
+                    <iframe id="page" src="/home" frameborder="0" scrolling="no" width="100%" height="730px;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

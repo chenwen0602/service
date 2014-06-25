@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css">
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="/stylesheets/filcal.css">
+
+    <link rel="stylesheet" href="/stylesheets/date.css" type="text/css"/>
+
+
+    <script type="text/javascript">
+    </script>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript" src="/scripts/date.js"></script>
+            <strong style="color:red">当前位置:</strong>
+            <div>
+                <form id="filcal" class="bs-docs-example form-inline">
+                    <table class="tab">
+                        <tr>
+                            <td align="center" class="bg06" width="15%">
+                                <span class="zi5">快速搜索:</span>
+                            </td>
+                            <td class="bg05">
+                                <table class="table-list-form">
+                                    <tr>
+                                        <td align="right" >
+                                            <span>名称</span>
+                                        </td>
+                                        <td>
+                                            <input  type="text"  name="name" height="15px;"/>
+                                        </td>
+                                        <td align="right">
+                                            <span>价格</span>
+                                        </td>
+                                        <td >
+                                            <input type="text" id="startPrice" size="5"/>&nbsp;&nbsp;到&nbsp;&nbsp;<input type="text" id="endPrice" size="5"/>区间
+                                        </td>
+                                        <td rowspan="2" align="center" style="padding-left:20px;padding-right: 20px;">
+                                            <button class="btn btn-primary" type="button">搜索</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="right">
+                                            <span>开始时间</span>
+                                        </td>
+                                        <td>
+                                            <div style="width:220px;margin:0 auto;">
+                                                <input name="member.birth" type="text" value=""  readonly onClick="showcalendar(event,this);" onFocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''">
+                                            </div>
+                                        </td>
+                                        <td align="right">
+                                            <span>结束时间</span>
+                                        </td>
+                                        <td>
+                                            <div style="width:220px;margin:0 auto;">
+                                                <input name="member.birth" type="text" value=""  readonly onClick="showcalendar(event,this);" onFocus="showcalendar(event, this);if(this.value=='0000-00-00')this.value=''">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" class="bg06" width="15%">
+                                <span class="zi5">快速操作:</span>
+                            </td>
+                            <td>
+                                <button class="btn btn-info" type="button">显示所有</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-info" type="button">添加</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <button class="btn btn-info" type="button">批量删除</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        <div class="row-fluid">
+            <table  class="table-list" id="tabList" >
+                <tr>
+                    <th width="3%"><input type="checkbox" id="all" onchange="getOrCancel()" value=""/></th>
+                    <th width="12%">名称</th>
+                    <th width="10%" class="sortable"><a href="javascript:sort('price','desc')">单价</a> </th>
+                    <th width="8%" class="sortable"><a href="javascript:sort('price','desc')">数量</a> </th>
+                    <th width="10%" class="sortable"><a href="javascript:sort('price','desc')">总价</a> </th>
+                    <th width="15%" class="sortable"><a href="javascript:sort('time','desc')">时间</a></th>
+                    <th width="27%">描述</th>
+                    <th width="15%">操作</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr bgcolor='FFFFC8'>
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr >
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr bgcolor='FFFFC8'>
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr  >
+                <td><input type="checkbox"/></td>
+                <td>五花肉</td>
+                <td>12.5</td>
+                <td>1</td>
+                <td>12.5</td>
+                <td>2014-6-22</td>
+                <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr bgcolor='FFFFC8'>
+                <td><input type="checkbox"/></td>
+                <td>五花肉</td>
+                <td>12.5</td>
+                <td>1</td>
+                <td>12.5</td>
+                <td>2014-6-22</td>
+                <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr >
+                <td><input type="checkbox"/></td>
+                <td>五花肉</td>
+                <td>12.5</td>
+                <td>1</td>
+                <td>12.5</td>
+                <td>2014-6-22</td>
+                <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr bgcolor='FFFFC8'>
+                <td><input type="checkbox"/></td>
+                <td>五花肉</td>
+                <td>12.5</td>
+                <td>1</td>
+                <td>12.5</td>
+                <td>2014-6-22</td>
+                <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr><tr>
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+                <tr bgcolor='FFFFC8'>
+                    <td><input type="checkbox"/></td>
+                    <td>五花肉</td>
+                    <td>12.5</td>
+                    <td>1</td>
+                    <td>12.5</td>
+                    <td>2014-6-22</td>
+                    <td>45454</td>
+                    <td><a href="#">修改</a> <a href="#">删除</a> </td>
+                </tr>
+            </table>
+            <div class="pagination" align="right">
+                <ul>
+                    <li><a href="#">上一页</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">下一页</a></li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>
